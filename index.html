@@ -102,43 +102,24 @@
 
         /* HERO SECTION */
         .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            min-height: 90vh;
-            background: linear-gradient(120deg, var(--light-pink), var(--lavender-light));
-            padding: 40px 30px;
-        }
-        .hero-text h1 {
-            font-size: 46px;
-            margin-bottom: 15px;
-            /* color:--primary-text; */
-        }
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.7;
-            /* color: --primary-text; */
-            max-width: 500px;
-        }
-        .hero-text button {
-            margin-top: 25px;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 30px;
-            background: #fff;
-            color: #7e57c2;
-            font-size: 15px;
-            cursor: pointer;
-            font-weight: 500;
-        }
-        .hero-image img {
-            /* width: 100%; */
-            width: 70%;
-            max-height: 520px;
-            object-fit: cover;
-            border-radius: 30px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
-        }
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        overflow: hidden;
+        line-height: 0; /* Removes unexpected baseline browser spacing */
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        max-height: 90vh; /* Keeps it under viewport fold on huge screens */
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
 
         section {
             max-width: 1200px;
@@ -204,6 +185,11 @@
           cursor:pointer;
         }
 
+        @media (max-width: 768px) {
+            .hero img {
+                max-height: 60vh; /* Optimizes viewing height on mobile screens */
+            }
+        }
         /* Tablet: 3 slides */
         @media (min-width: 600px) and (max-width: 899px) {
           .slider img { flex: 0 0 calc((100% - 40px) / 3); height: 360px; }
@@ -326,22 +312,7 @@
   <!-- Hero Section -->
     <!-- HERO -->
   <div class="hero">
-    <div class="hero-text">
-      <h1 class="hero_section_heading">
-        <b>
-          Style with your own choice
-        </b>
-      </h1>
-      <p>
-        Get outfits customized exactly to your measurements and 
-        style. Because everyone deserves to wear designer 
-        fashion with confidence within their budget
-      </p>
-      <a href="#contact_us"><button>Book Appointment</button></a>
-    </div>
-    <div class="hero-image">
-        <img src="assets/img/designs/4_1.jpg" alt="Fashion Model">
-    </div>
+      <img src="assets/img/hero.jpg" alt="Fashion Model">  
   </div>
 <!-- Hero Section End -->
 
