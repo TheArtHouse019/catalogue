@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavender Loom | Fashion Design Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lavender: #b39ddb;
+            --light-pink: #f8cdda;
+            --soft-bg: #fdf7fb;
+            --dark-text: #4a3f55;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--soft-bg);
+            color: var(--dark-text);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            min-height: 90vh;
+            background: linear-gradient(120deg, var(--light-pink), var(--lavender));
+            padding: 40px 80px;
+        }
+        .hero-text h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #fff;
+            max-width: 500px;
+        }
+        .hero-text button {
+            margin-top: 25px;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 30px;
+            background: #fff;
+            color: #7e57c2;
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .hero-image img {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #7e57c2;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .service-box {
+            background: #fff;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(179,157,219,0.25);
+        }
+
+        /* SLIDER */
+        .slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 10px;
+        }
+        .slider img {
+            flex: 0 0 300px;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 22px;
+            scroll-snap-align: start;
+            box-shadow: 0 18px 40px rgba(248,205,218,0.6);
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(248,205,218,0.45);
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #fff;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 20px 45px rgba(179,157,219,0.3);
+            max-width: 750px;
+            margin: auto;
+        }
+        .contact p { margin: 14px 0; }
+
+        footer {
+            background: linear-gradient(120deg, var(--lavender), var(--light-pink));
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .socials a {
+            margin: 0 12px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+                text-align: center;
+            }
+            .hero-image { margin-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h1>Design. Stitch. Shine.</h1>
+        <p>
+            Lavender Loom is a modern fashion studio creating elegant, custom-fit outfits.
+            From daily wear to festive designs, we stitch confidence into every piece.
+        </p>
+        <button>Book Appointment</button>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Fashion Model">
+    </div>
+</div>
+
+<section>
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">Designer Blouses & Dresses</div>
+        <div class="service-box">Ethnic & Bridal Wear</div>
+        <div class="service-box">Custom Fashion Designing</div>
+        <div class="service-box">Perfect Alterations</div>
+    </div>
+</section>
+
+<section>
+    <h2>Featured Designs</h2>
+    <div class="slider">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Design 1">
+        <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956" alt="Design 2">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Design 3">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Design 4">
+    </div>
+</section>
+
+<section>
+    <h2>Our Work Gallery</h2>
+    <div class="gallery" id="gallery"></div>
+    <div style="text-align:center;margin-top:40px;">
+        <button id="loadMore" style="padding:12px 30px;border:none;border-radius:30px;background:linear-gradient(120deg,var(--lavender),var(--light-pink));color:#fff;font-size:15px;cursor:pointer;">Load More</button>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:999;align-items:center;justify-content:center;">
+    <div style="max-width:90%;max-height:90%;position:relative;">
+        <span id="closeLightbox" style="position:absolute;top:-40px;right:0;font-size:28px;color:#fff;cursor:pointer;">&times;</span>
+        <img id="lightboxImg" src="" style="width:100%;border-radius:20px;" />
+    </div>
+</div>
+
+<script>
+/* ===== GALLERY DATA ===== */
+const galleryData = [
+  {
+    name: "Pink Gown",
+    category: "Party Wear",
+    cover: "work1.jpg",
+    images: ["work1.jpg","work1-2.jpg","work1-3.jpg"]
+  },
+  {
+    name: "Lavender Saree",
+    category: "Ethnic",
+    cover: "work2.jpg",
+    images: ["work2.jpg","work2-2.jpg"]
+  },
+  {
+    name: "Bridal Lehenga",
+    category: "Bridal",
+    cover: "work3.jpg",
+    images: ["work3.jpg","work3-2.jpg"]
+  },
+  {
+    name: "Designer Blouse",
+    category: "Blouse",
+    cover: "work4.jpg",
+    images: ["work4.jpg"]
+  },
+  {
+    name: "Festive Kurti",
+    category: "Festive",
+    cover: "work5.jpg",
+    images: ["work5.jpg"]
+  },
+  {
+    name: "Anarkali Suit",
+    category: "Ethnic",
+    cover: "work6.jpg",
+    images: ["work6.jpg"]
+  }
+];
+
+let visibleCount = 0;
+const perLoad = 5;
+const galleryEl = document.getElementById('gallery');
+const loadMoreBtn = document.getElementById('loadMore');
+
+function loadGallery() {
+  const slice = galleryData.slice(visibleCount, visibleCount + perLoad);
+  slice.forEach(item => {
+    const card = document.createElement('div');
+    card.style.animation = 'fadeUp 0.6s ease';
+    card.innerHTML = `
+      <div style="background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.15);cursor:pointer;" onclick="openLightbox('images/${item.cover}')">
+        <img src="images/${item.cover}" style="width:100%;height:320px;object-fit:cover;">
+        <div style="padding:15px;text-align:center;">
+          <strong>${item.name}</strong><br>
+          <small>${item.category}</small>
+        </div>
+      </div>`;
+    galleryEl.appendChild(card);
+  });
+  visibleCount += perLoad;
+  if (visibleCount >= galleryData.length) loadMoreBtn.style.display = 'none';
+}
+
+/* LIGHTBOX */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+toggleScroll = (state) => document.body.style.overflow = state ? 'hidden' : 'auto';
+
+window.openLightbox = (src) => {
+  lightboxImg.src = src;
+  lightbox.style.display = 'flex';
+  toggleScroll(true);
+}
+
+document.getElementById('closeLightbox').onclick = () => {
+  lightbox.style.display = 'none';
+  toggleScroll(false);
+}
+
+loadMoreBtn.onclick = loadGallery;
+loadGallery();
+</script>
+
+<style>
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+</style>
+
+<section>
+    <h2>Visit Our Boutique</h2>
+    <div class="contact">
+        <p><strong>📍 Address:</strong> Shop No. 12, Main Road, Your City</p>
+        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+        <p><strong>📧 Email:</strong> lavenderloom@gmail.com</p>
+        <p><strong>⏰ Timings:</strong> Mon – Sat | 10 AM – 7 PM</p>
+    </div>
+</section>
+
+<footer>
+    <p>Follow Us</p>
+    <div class="socials">
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">WhatsApp</a>
+    </div>
+    <p style="margin-top:12px">© 2026 Lavender Loom</p>
+</footer>
+
+</body>
+</html>
