@@ -3,15 +3,8 @@
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
-
 * Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
+========================================================= -->
 <html
   lang="en"
   class="light-style"
@@ -38,11 +31,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Icons. Uncomment required icon fonts -->
+    <!-- Icons -->
     <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
 
     <!-- Core CSS -->
@@ -55,53 +48,86 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-    <!-- Page CSS -->
-
     <!-- Helpers -->
     <script src="assets/vendor/js/helpers.js"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="assets/js/config.js"></script>
 
     <style>
-      .nav-item{
-        color:black !important;
-      }
-
-      #header_id_name{
-        font-size: 30px !important;
-      }
-      .navbar-nav .nav-item{
-        font-size: 20px !important;
-      }
       :root {
-            /* --lavender: #b39ddb;
-            --light-pink: #f8cdda; */
-            --lavender-light: #ede6f9;
-            --light-pink: #f7dce4;
-            --soft-bg: #fdf7fb;
-            --dark-text: #8e898d;
-            --primary-text: #977b7b;
-        }
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: var(--soft-bg);
-            color: var(--dark-text);
-        }
+        --deep-burgundy: #5c061a;
+        --dusty-rose: #d67a8a;
+        --warm-cream: #faf6ef;
+        --rich-brown: #3a2e2b;
+        --soft-gold: #c9a054;
+      }
 
-        /* nav logo */
-        #header_loader_image{
-          max-width:50px;
+      * { box-sizing: border-box; }
+      
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: var(--warm-cream);
+        color: var(--rich-brown);
+      }
 
-          max-height:50px;
-          object-fit: cover;
-        }
+      h1, h2, h3, .navbar-brand, .card-title {
+        font-family: 'Playfair Display', serif;
+        color: var(--deep-burgundy) !important;
+      }
 
-        /* HERO SECTION */
-        .hero {
+      h2 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      /* Decorative separator matching banner tone */
+      h2::after {
+        content: '❖';
+        display: block;
+        font-size: 16px;
+        color: var(--dusty-rose);
+        margin-top: 8px;
+        font-weight: normal;
+      }
+
+      /* NAVIGATION */
+      .navbar {
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 20px rgba(58, 46, 43, 0.04);
+        padding: 15px 0;
+      }
+      
+      #header_id_name {
+        font-size: 26px !important;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      
+      .navbar-nav .nav-item .nav-link {
+        color: var(--rich-brown) !important;
+        font-size: 16px !important;
+        font-weight: 500;
+        padding: 8px 20px !important;
+        transition: color 0.3s ease;
+      }
+      
+      .navbar-nav .nav-item .nav-link:hover {
+        color: var(--dusty-rose) !important;
+      }
+
+      #header_loader_image {
+        max-width: 50px;
+        max-height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      /* HERO SECTION - FULL SCREEN RESPONSIVE */
+      .hero {
         width: 100vw;
         position: relative;
         left: 50%;
@@ -109,193 +135,133 @@
         margin-left: -50vw;
         margin-right: -50vw;
         overflow: hidden;
-        line-height: 0; /* Removes unexpected baseline browser spacing */
-    }
+        line-height: 0;
+      }
 
-    .hero img {
+      .hero img {
         width: 100%;
         height: auto;
-        max-height: 90vh; /* Keeps it under viewport fold on huge screens */
+        max-height: 90vh;
         object-fit: cover;
         object-position: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
+        box-shadow: 0 10px 30px rgba(58, 46, 43, 0.1);
+      }
 
-        section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 80px 20px;
+      @media (max-width: 768px) {
+        .hero img {
+          max-height: 60vh;
         }
-        h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: #7e57c2;
-        }
+      }
 
-        .hero_section_heading{
-          color:var(--primary-text) !important;
-        }
+      section {
+        max-width: 1200px;
+        margin: auto;
+        padding: 80px 20px;
+      }
 
-        /* SERVICES */
-        #our_services_heading , #featured_design_heading , #our_designs, #contact_us{
-          color: var(--primary-text);
-          font-weight:bold;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-        .service-box {
-            background: #fff;
-            padding: 35px 25px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 15px 40px rgba(179,157,219,0.25);
-        }
+      /* CATEGORY INTERACTIVE CARDS STYLE PACK */
+      .category-card-wrapper {
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(214, 122, 138, 0.12);
+        box-shadow: 0 8px 25px rgba(58, 46, 43, 0.04);
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
-        /* SLIDER */
-        /* SLIDER / CAROUSEL */
-        .carousel-container { max-width: 1200px; margin: auto; position: relative; }
-        .carousel-viewport { overflow: hidden; padding-bottom: 10px; }
-        .slider {
-          display: flex;
-          gap: 20px;
-          transition: transform 0.45s ease;
-          will-change: transform;
-          align-items: stretch;
-        }
-        .slider img {
-          width: 100%;
-          height: 420px;
-          object-fit: cover;
-          border-radius: 22px;
-          box-shadow: 0 18px 40px rgba(248,205,218,0.6);
-          flex: 0 0 100%;
-        }
+      .category-card-wrapper:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 35px rgba(92, 6, 26, 0.08);
+        border-color: var(--dusty-rose);
+      }
 
-        #loadMore{
-          padding:12px 30px;
-          border:none;
-          border-radius:30px;
-          background:pink;
-          color:#fff;
-          font-size:15px;
-          cursor:pointer;
-        }
+      .category-img-frame {
+        width: 100%;
+        height: 280px; 
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.5s ease;
+      }
 
-        @media (max-width: 768px) {
-            .hero img {
-                max-height: 60vh; /* Optimizes viewing height on mobile screens */
-            }
-        }
-        /* Tablet: 3 slides */
-        @media (min-width: 600px) and (max-width: 899px) {
-          .slider img { flex: 0 0 calc((100% - 40px) / 3); height: 360px; }
-        }
+      .category-card-wrapper:hover .category-img-frame {
+        transform: scale(1.03);
+      }
 
-        /* Desktop: 4 slides */
-        @media (min-width: 900px) {
-          .slider img { flex: 0 0 calc((100% - 60px) / 4); height: 340px; }
-        }
+      .category-footer-body {
+        padding: 20px;
+        text-align: center;
+        background: #ffffff;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-        .carousel-btn {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          border: none;
-          background: rgba(0,0,0,0.45);
-          color: #fff;
-          width: 44px;
-          height: 44px;
-          border-radius: 8px;
-          cursor: pointer;
-          z-index: 2;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 22px;
-          line-height: 1;
-        }
-        .carousel-btn.prev { left: 8px; }
-        .carousel-btn.next { right: 8px; }
-        .carousel-btn:focus { outline: none; box-shadow: 0 0 0 3px rgba(126,87,194,0.25); }
+      .category-title-text {
+        font-family: 'Playfair Display', serif;
+        color: var(--deep-burgundy);
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
 
-        /* LIGHTBOX STYLES */
-        #lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:999; align-items:center; justify-content:center; padding:20px; }
-        #lightbox .lightbox-content { max-width:calc(100vw - 80px); max-height:calc(100vh - 80px); width:auto; height:auto; position:relative; padding:8px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; }
-        #lightbox .lightbox-content img { display:block; max-height: 90vh; object-fit:contain; border-radius:20px; margin:20px auto; }
-        #lightbox .lightbox-close { position:absolute; top:-36px; right:0; font-size:28px; color:#fff; background:transparent; border:none; cursor:pointer;  }
+      .category-status-badge {
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--dusty-rose);
+        font-weight: 500;
+      }
 
-        /* GALLERY */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 18px;
-            box-shadow: 0 12px 30px rgba(248,205,218,0.45);
-        }
+      
 
-        /* CONTACT */
-        .contact {
-            background: #fff;
-            padding-top: 45px;
-            padding-bottom: 45px;
-            border-radius: 25px;
-            box-shadow: 0 20px 45px rgba(179,157,219,0.3);
-            width: 100%;
-            margin: auto;
-        }
-        .contact p { margin: 14px 0; }
+      /* CONTACT DECK & FOOTER */
+      .contact {
+        background: #ffffff;
+        padding: 50px 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(58, 46, 43, 0.04);
+        border: 1px solid rgba(214, 122, 138, 0.1);
+        width: 100%;
+        margin: auto;
+      }
+      
+      .contact p { margin: 16px 0; font-size: 16px; }
+      .contact strong { color: var(--deep-burgundy); }
 
-        footer {
-            background: linear-gradient(120deg, var(--lavender-light), var(--light-pink));
-            color: var(--primary-text);
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .socials a {
-            margin: 0 12px;
-            color: var(--primary-text);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 40px 20px;
-                text-align: center;
-            }
-            .hero-image { margin-top: 40px; }
-        }
-
-         @media (max-width: 420px) {
-          #lightbox .lightbox-content img { display:block; max-height: 50vh; object-fit:contain; border-radius:20px; margin:20px auto; }
-         }
+      footer {
+        background: var(--rich-brown);
+        color: var(--warm-cream);
+        text-align: center;
+        padding: 50px 20px;
+        margin-top: 60px;
+      }
+      
+      .socials a {
+        margin: 0 15px;
+        color: var(--dusty-rose);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .socials a:hover {
+        color: #ffffff;
+      }
     </style>
   </head>
 
   <body>
-    <!-- Content -->
-
     
-    <!-- Navigation -->
+    <!-- Navigation Navbar -->
     <nav class="navbar navbar-expand-lg bg-white">
       <div class="container">
-        
-          <a class="navbar-brand fw-bold" href="#" >
-            <img id="header_loader_image" src="assets/img/logo.png" alt="Fashion Model">
-            
-            <span id="header_id_name">
-
-            </span>
+          <a class="navbar-brand fw-bold" href="#">
+            <img id="header_loader_image" src="assets/img/logo.png" alt="Logo">
+            <span id="header_id_name"></span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class="navbar-toggler-icon"></span>
@@ -307,463 +273,174 @@
               </ul>
           </div>
       </div>
-  </nav>
+    </nav>
 
-  <!-- Hero Section -->
-    <!-- HERO -->
-  <div class="hero">
-      <img src="assets/img/hero.jpg" alt="Fashion Model">  
-  </div>
-<!-- Hero Section End -->
+    <!-- Full-Screen Hero Image Banner -->
+    <div class="hero">
+        <img src="assets/img/hero.jpg" alt="Handmade Designs Banner Layer">  
+    </div>
 
-<!-- Our Services -->
-<section>
-  <h2 id="our_services_heading">Our Services</h2>
-  <div class="services services_content_box" >
+    <!-- Our Categories Section -->
+    <section>
+      <h2 id="our_services_heading">Our Collections</h2>
+      <p id="catalog_sync_stamp" style="text-align: center; font-size: 13px; color: var(--dusty-rose); margin-top: -30px; margin-bottom: 40px; font-style: italic;"></p>
       
-  </div>
-</section>
-<!-- Our Services End -->
+      <!-- 🚀 Dynamic Categories Responsive Card Matrix Container -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="categories_grid_container">
+        <!-- Cards will inject dynamically here via javascript loop engine -->
+      </div>
+    </section>
 
-<!-- Featured Design -->
-  <section>
-    <h2 id="featured_design_heading">Featured Designs</h2>
-    <div class="carousel-container">
-      <button class="carousel-btn prev" aria-label="Previous">‹</button>
-      <div class="carousel-viewport">
-        <div class="slider" id="featured_slider">
+    <!-- Featured Section -->
+    <section>
+        <h2 id="featured_design_heading">Featured Designs</h2>
+        <div class="carousel-container">
+          <button class="carousel-btn prev" aria-label="Previous">‹</button>
+          <div class="carousel-viewport">
+            <div class="slider" id="featured_slider"></div>
+          </div>
+          <button class="carousel-btn next" aria-label="Next">›</button>
+        </div>
+    </section>
+
+    <!-- Custom Portfolio Showcase Layout -->
+    <section>
+        <h2 id="our_designs">Our Creations</h2>
+        <div class="gallery" id="gallery"></div>
+        <div style="text-align:center;margin-top:40px;">
+            <button id="loadMore">Load More Masterpieces</button>
+        </div>
+    </section>
+
+    <!-- Lightbox Integration Layout -->
+    <div id="lightbox" aria-hidden="true">
+      <div class="lightbox-content">
+        <button id="closeLightbox" class="lightbox-close" aria-label="Close">&times;</button>
+        <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous">‹</button>
+        <img id="lightboxImg" src="" alt="Preview frame content" />
+        <button id="lightboxNext" class="lightbox-nav next" aria-label="Next">›</button>
+        <div id="lightboxThumbs" class="lightbox-thumbs"></div>
+      </div>
+    </div>
+
+    <!-- Contact Segment Layout -->
+    <section>
+      <h2 id="contact_us">Get in Touch</h2>
+      <div class="row contact">
+        <div class="col-md-6">
+            <p><strong>📍 Address:</strong> Shop No. 12, Main Road, Your City</p>
+            <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+            <p><strong>📧 Email:</strong> lavenderloom@gmail.com</p>
+            <p><strong>⏰ Timings:</strong> Mon – Sat | 10 AM – 7 PM</p>
+        </div>
+        <div class="col-md-6 text-md-center mt-4 mt-md-0">
+          <p><strong>Follow Our Journey</strong></p>
+          <div class="socials mt-2">
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+              <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
         </div>
       </div>
-      <button class="carousel-btn next" aria-label="Next">›</button>
-    </div>
-</section>
-<!-- Featured Design End -->
+    </section>
 
+    <footer>
+        <p>© 2026 Handmade with Heart. All Rights Reserved.</p>
+    </footer>
 
-<!-- contact us END -->
-
-<section>
-    <h2 id="our_designs">Our Designs</h2>
-    <div class="gallery" id="gallery"></div>
-    <div style="text-align:center;margin-top:40px;">
-        <button id="loadMore">Load More</button>
-    </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" aria-hidden="true">
-  <div class="lightbox-content">
-    <button id="closeLightbox" class="lightbox-close" aria-label="Close">&times;</button>
-    <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous">‹</button>
-    <img id="lightboxImg" src="" alt="Preview image" />
-    <button id="lightboxNext" class="lightbox-nav next" aria-label="Next">›</button>
-    <div id="lightboxThumbs" class="lightbox-thumbs" style="display:flex;gap:8px;overflow:auto;margin-top:12px;justify-content:center;"></div>
-  </div>
-</div>
-<!-- contact us -->
-<style>
-/* Lightbox nav/buttons and layout */
-#lightbox .lightbox-content { position:relative; display:flex; flex-direction:column; align-items:center; }
-#lightbox .lightbox-nav {
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.45);
-  color:#fff;
-  border:none;
-  font-size:28px;
-  padding:3px 20px;
-  border-radius:10px;
-  cursor:pointer;
-  z-index:10;
-}
-#lightbox .lightbox-nav.prev { left:12px; }
-#lightbox .lightbox-nav.next { right:12px; }
-/* hide thumbnails entirely (user requested only left/right buttons)
-   and ensure buttons are hidden on small screens */
-#lightbox .lightbox-thumbs { display:none !important; }
-@media (max-width:600px){
-  /* #lightbox .lightbox-nav { display:none !important; } */
-}
-</style>
-
-    <h2 id="contact_us">Contact Us</h2>
-    <div class="row contact">
-      <div class="col-md-6">
-        <div class="">
-          <p><strong>📍 Address:</strong> Shop No. 12, Main Road, Your City</p>
-          <p><strong>📞 Phone:</strong> +91 98765 43210</p>
-          <p><strong>📧 Email:</strong> lavenderloom@gmail.com</p>
-          <p><strong>⏰ Timings:</strong> Mon – Sat | 10 AM – 7 PM</p>
-      </div>
-      </div>
-      <div class="col-md-6">
-        <p>Follow Us</p>
-        <div class="socials">
-            <a href="#">Instagram</a> |
-            <a href="#">Facebook</a> |
-            <a href="#">WhatsApp</a>
-        </div>
-      </div>
-      <div class="col-md-12">
-          <p style="margin-top:12px" class="text-center">© 2026</p>
-      </div>
-    </div>
-  
-    <!-- / Content -->
-
-    
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
+    <!-- Vendor Scripts -->
     <script src="assets/vendor/libs/jquery/jquery.js"></script>
     <script src="assets/vendor/libs/popper/popper.js"></script>
     <script src="assets/vendor/js/bootstrap.js"></script>
     <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
     <script src="assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
 
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
+    <!-- Dynamic Application Modules -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custome.js"></script>
-
-    <!-- Page JS -->
-
-    <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" ></script>
-    <script src="project_data.js" ></script>
-  </body>
-  <script>
-    var project_thumb = 'assets/img/project_thumb/';
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="project_data.js"></script>
 
-    //title
-    $('#page_title').text(project_title);
-    $('#header_id_name').text(project_title);
-    
-    $(document).ready(function(){
+    <!-- Core Runtime Controller Logic -->
+    <script>
+      var project_thumb = 'assets/img/project_thumb/';
 
-  
-    
-      //load services
-      if(services.length > 0){
-        let service_htm = '';
-        services.forEach(service => {
-          service_htm += `<div class="service-box">${service}</div>`;
-        });
-        $('.services_content_box').html(service_htm);
-      }
+      $('#page_title').text(project_title);
+      $('#header_id_name').text(project_title);
+      
+      $(document).ready(function() {
+        // 🔗 Direct relative route path targeting your local folder workspace structure
+        const LOCAL_CATEGORIES_SOURCE = "data/categories.json";
 
-      //load featured projects
-      if(featuredProjects.length > 0){
-        featuredProjects.forEach(featured_item => {
-          $('#featured_slider').append(`<img src="assets/img/designs/${featured_item}" alt="Design 4">`);
-        });
-      }
-          
+        function loadLocalCatalog() {
+          $.ajax({
+            url: LOCAL_CATEGORIES_SOURCE,
+            type: "GET",
+            dataType: "json",
+            mimeType: "application/json", // Ensures clean system evaluation configuration matrices
+            success: function(response) {
+              // 1. Verify schema signature integrity
+              if (!response || !response.data) {
+                console.error("Local catalog dataset payload structure is missing or invalid.");
+                return;
+              }
 
+              // 2. Map system updates stamp to screen template metrics layout safely
+              if (response.last_updated) {
+                $("#catalog_sync_stamp").text("Catalog Status Live: " + response.last_updated);
+              }
 
+              // 3. Extract items array and apply standard ascending Sort ID format layout routing
+              let categoriesArray = response.data;
+              categoriesArray.sort(function(a, b) {
+                return Number(a.sort_id) - Number(b.sort_id);
+              });
 
-   
+              // 4. Clear and populate your clean grid layout container interface
+              let gridContainer = $("#categories_grid_container");
+              gridContainer.empty(); 
 
-      //display projects
-      if(Object.keys(project_data).length > 0){
-        Object.entries(project_data).forEach(([code, value]) => {
-            let htm = '';
-          htm = `<div class="col-md-4 mb-3">
-                  <div class="card">
-                    <img src="${project_thumb+value.logo}" class="card-img-top" alt="${value.project_name}"/>
-                    <div class="card-body">
-                      <h5 class="card-title">${value.project_name}</h5>
-                      <h6 class="card-title">${value.organization}</h6>
-                      <p class="card-text">${value.short_description}</p>`;
-                      // alert(value.private_reason);
-                      if(value.private_reason == "0"){
-                        htm += `<a href="${value.url}" target="_new" class="btn btn-success m-1" data-mdb-ripple-init>View</a>`;
-                      }else{
-                        htm += `<p class="text-info" style="margin-bottom:0px;">${value.private_reason}</p>`;
-                      }
-                      if(value.screenshots.length > 0){
-                        htm += `<a href="preview.html?q=${code}" target="_new" class="btn btn-info m-1" data-mdb-ripple-init>Screen Shots</a>`;
-                      }else{
-                        htm += `<p class="text-info" style="margin-bottom:0px;">Preview Not Available</p>`;
-                      }
-                    htm += `</div>
+              categoriesArray.forEach(function(category) {
+                // Verify element state flags are set to run actively
+                if (category.status !== "Active") return;
+
+                let cardHtml = `
+                  <div class="col">
+                    <div class="category-card-wrapper" onclick="redirectToCategoryProducts('${category.id}')">
+                      <div style="overflow: hidden; line-height: 0;">
+                        <img src="${category.image}" class="category-img-frame" alt="${category.name}" />
+                      </div>
+                      <div class="category-footer-body">
+                        <h4 class="category-title-text">${category.name}</h4>
+                        <span class="category-status-badge">View Collection ⟶</span>
+                      </div>
+                    </div>
                   </div>
-              </div>`;
-              $('#project').append(htm);   
-        });
-      }
-    });
+                `;
+                gridContainer.append(cardHtml);
+              });
+            },
+            error: function(xhr, status, error) {
+              console.error("Local Asset Engine Load Error: Failed to open relative local JSON data resource.", error);
+              $("#categories_grid_container").html(`
+                <div class="col-12 text-center py-5">
+                  <p class="text-secondary small">Unable to map local files layout. Verify data/category.json paths match up clean.</p>
+                </div>
+              `);
+            }
+          });
+        }
 
-    function calculateYears() {
-    const start = new Date('2021-09-20');
-    const end = new Date(); // Today's date
+        // 🚀 Redirect tracking mapping parameter targets directly to query values format on page locations
+        window.redirectToCategoryProducts = function(categoryId) {
+          if (!categoryId) return;
+          window.location.href = "products.html?category_id=" + encodeURIComponent(categoryId);
+        };
 
-    let years = end.getFullYear() - start.getFullYear();
-    let months = end.getMonth() - start.getMonth();
-    let days = end.getDate() - start.getDate();
-
-    // Adjust if the month/day in end date is before the start date
-    if (months < 0 || (months === 0 && days < 0)) {
-        years--;
-    }
-
-    return years;
-}
-
-// Carousel behavior: responsive slidesPerView (1 / 3 / 4) with prev/next controls, autoplay and looping
-// If Owl Carousel is present, skip the custom controller to avoid conflicts
-if (!(window.jQuery && typeof jQuery.fn.owlCarousel === 'function')) {
-  (function(){
-  const container = document.querySelector('.carousel-container');
-  if(!container) return;
-  const track = container.querySelector('.slider');
-  const prevBtn = container.querySelector('.carousel-btn.prev');
-  const nextBtn = container.querySelector('.carousel-btn.next');
-  const items = () => Array.from(track.children);
-
-  let currentIndex = 0;
-  let slidesPerView = 1;
-
-  const loop = true; // enable looping
-  const autoplay = true; // enable autoplay
-  const autoplayInterval = 3500; // ms
-  let autoplayTimer = null;
-
-  function calcSlidesPerView(){
-    const w = window.innerWidth;
-    if(w < 600) return 1;
-    if(w < 900) return 3;
-    return 4;
-  }
-
-  function update() {
-    slidesPerView = calcSlidesPerView();
-    const total = items().length;
-    const maxIndex = Math.max(0, total - slidesPerView);
-    if(currentIndex > maxIndex) currentIndex = loop ? 0 : maxIndex;
-    moveTo(currentIndex);
-    // toggle buttons only when not looping
-    if(!loop){
-      prevBtn.disabled = currentIndex <= 0;
-      nextBtn.disabled = currentIndex >= maxIndex;
-    } else {
-      prevBtn.disabled = false;
-      nextBtn.disabled = false;
-    }
-  }
-
-  function moveTo(index){
-    const children = items();
-    if(children.length <= 1){ track.style.transform = '' ; return; }
-    // try to compute pixel step between item 0 and 1
-    let step = 0;
-    if(children.length > 1){
-      const r0 = children[0].getBoundingClientRect();
-      const r1 = children[1].getBoundingClientRect();
-      step = r1.left - r0.left;
-    }
-    if(!step || !isFinite(step)){
-      // fallback to percentage translate when step can't be calculated
-      const pct = (100 / slidesPerView) * index;
-      track.style.transform = `translateX(-${pct}%)`;
-    } else {
-      track.style.transform = `translateX(-${Math.round(index * step)}px)`;
-    }
-  }
-
-  function goNext(){
-    const total = items().length;
-    const maxIndex = Math.max(0, total - slidesPerView);
-    if(currentIndex >= maxIndex){
-      if(loop) currentIndex = 0;
-      else return;
-    } else {
-      currentIndex++;
-    }
-    update();
-  }
-
-  function goPrev(){
-    const total = items().length;
-    const maxIndex = Math.max(0, total - slidesPerView);
-    if(currentIndex <= 0){
-      if(loop) currentIndex = maxIndex;
-      else return;
-    } else {
-      currentIndex--;
-    }
-    update();
-  }
-
-  prevBtn.addEventListener('click', function(){ goPrev(); });
-  nextBtn.addEventListener('click', function(){ goNext(); });
-
-  // autoplay
-  function startAutoplay(){
-    if(!autoplay) return;
-    stopAutoplay();
-    autoplayTimer = setInterval(goNext, autoplayInterval);
-  }
-  function stopAutoplay(){ if(autoplayTimer){ clearInterval(autoplayTimer); autoplayTimer = null; } }
-
-  // pause on hover
-  container.addEventListener('mouseenter', stopAutoplay);
-  container.addEventListener('mouseleave', startAutoplay);
-
-  // reposition on resize
-  let resizeTimer = null;
-  window.addEventListener('resize', function(){
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(update, 120);
-  });
-
-  // initialize
-  window.addEventListener('load', function(){ setTimeout(function(){ update(); startAutoplay(); }, 120); });
-  document.addEventListener('DOMContentLoaded', function(){ setTimeout(function(){ update(); startAutoplay(); }, 120); });
-  })();
-}
-  </script>
-
-
-<!-- Gallay Script -->
- <script>
-
-let visibleCount = 0;
-const perLoad = 4;
-const galleryEl = document.getElementById('gallery');
-const loadMoreBtn = document.getElementById('loadMore');
-
-function loadGallery() {
-  const slice = galleryData.slice(visibleCount, visibleCount + perLoad);
-  slice.forEach(item => {
-    const card = document.createElement('div');
-    card.style.animation = 'fadeUp 0.6s ease';
-    // resolve cover path: use absolute URL if provided, else prefix local project images folder
-    const coverSrc = (/^https?:\/\//i.test(item.cover) || item.cover.startsWith('/')) ? item.cover : 'assets/img/designs/' + item.cover;
-    card.innerHTML = `
-      <div style="background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.15);cursor:pointer;" onclick="openLightbox('${coverSrc}')">
-        <img src="${coverSrc}" style="width:100%;height:400px;object-fit:cover;">
-        <div style="padding:15px;text-align:center;">
-          <strong>${item.name}</strong><br>
-          <small>${item.category}</small>
-        </div>
-      </div>`;
-    galleryEl.appendChild(card);
-  });
-  visibleCount += perLoad;
-  if (visibleCount >= galleryData.length) loadMoreBtn.style.display = 'none';
-}
-
-/* LIGHTBOX */
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxPrev = document.getElementById('lightboxPrev');
-const lightboxNext = document.getElementById('lightboxNext');
-const lightboxThumbs = document.getElementById('lightboxThumbs');
-
-toggleScroll = (state) => document.body.style.overflow = state ? 'hidden' : 'auto';
-
-let currentImages = [];
-let currentIndex = 0;
-
-const resolvePath = (p) => (/^https?:\/\//i.test(p) || p.startsWith('/')) ? p : ('assets/img/designs/' + p);
-
-const showImage = (idx) => {
-  if(!currentImages || !currentImages.length) return;
-  currentIndex = ((idx % currentImages.length) + currentImages.length) % currentImages.length;
-  lightboxImg.src = currentImages[currentIndex];
-  // update thumbnails active state
-  if(lightboxThumbs){
-    Array.from(lightboxThumbs.children).forEach((t,i)=>{
-      t.classList.toggle('active', i === currentIndex);
-      t.style.opacity = i === currentIndex ? '1' : '0.7';
-      t.style.border = i === currentIndex ? '2px solid #fff' : '2px solid transparent';
-    });
-  }
-}
-
-window.openLightbox = (src) => {
-  const resolved = (/^https?:\/\//i.test(src) || src.startsWith('/')) ? src : ( src);
-  // find gallery item by cover or images
-  const item = (Array.isArray(galleryData) && galleryData.find(it => {
-    try{
-      if(resolvePath(it.cover) === resolved) return true;
-      if(Array.isArray(it.images)){
-        return it.images.map(resolvePath).indexOf(resolved) !== -1;
-      }
-    }catch(e){ }
-    return false;
-  })) || null;
-
-  if(item && Array.isArray(item.images) && item.images.length){
-    currentImages = item.images.map(resolvePath);
-  } else {
-    currentImages = [resolved];
-  }
-
-  // determine start index
-  const startIdx = currentImages.indexOf(resolved);
-  currentIndex = startIdx >= 0 ? startIdx : 0;
-
-  // render thumbnails
-  if(lightboxThumbs){
-    lightboxThumbs.innerHTML = currentImages.map((s,i)=> `<img src="${s}" data-index="${i}" style="width:64px;height:48px;object-fit:cover;border-radius:8px;cursor:pointer;" class="${i===currentIndex?'active':''}" />`).join('');
-    Array.from(lightboxThumbs.children).forEach(imgEl => {
-      imgEl.addEventListener('click', (e) => {
-        const i = parseInt(imgEl.getAttribute('data-index'),10);
-        showImage(i);
+        // Launch direct rendering pipeline tracking sequence immediately
+        loadLocalCatalog();
       });
-    });
-  }
-
-  lightbox.style.display = 'flex';
-  lightbox.setAttribute('aria-hidden', 'false');
-  toggleScroll(true);
-  showImage(currentIndex);
-}
-
-// prev / next
-if(lightboxPrev) lightboxPrev.onclick = () => showImage(currentIndex - 1);
-if(lightboxNext) lightboxNext.onclick = () => showImage(currentIndex + 1);
-
-document.getElementById('closeLightbox').onclick = () => {
-  lightbox.style.display = 'none';
-  lightbox.setAttribute('aria-hidden', 'true');
-  toggleScroll(false);
-}
-
-// close when clicking outside content
-lightbox.addEventListener('click', function(e){
-  const content = lightbox.querySelector('.lightbox-content');
-  if(!content) return;
-  if(!content.contains(e.target)){
-    lightbox.style.display = 'none';
-    lightbox.setAttribute('aria-hidden', 'true');
-    toggleScroll(false);
-  }
-});
-
-// keyboard nav
-document.addEventListener('keydown', function(e){
-  if(lightbox.style.display !== 'flex') return;
-  if(e.key === 'Escape'){
-    lightbox.style.display = 'none';
-    lightbox.setAttribute('aria-hidden', 'true');
-    toggleScroll(false);
-  }
-  if(e.key === 'ArrowRight') showImage(currentIndex + 1);
-  if(e.key === 'ArrowLeft') showImage(currentIndex - 1);
-});
-
-loadMoreBtn.onclick = loadGallery;
-loadGallery();
-</script>
-<!-- Gallay Script END -->
-
-
+      </script>
+  </body>
 </html>
