@@ -355,6 +355,7 @@
             <div>
               <h1 class="product-title-text" id="lblTitle">Loading Name...</h1>
               <div class="price-tag">₹<span id="lblPrice">0</span></div>
+              <div class="price-tag" style="font-size:20px">Item Code -  <span id="lblProductCode">--</span></div>
 
               <div class="desc-header">Product & Details</div>
               <p class="desc-content" id="lblDesc">No descriptive statement provided for this product portfolio asset.
@@ -372,7 +373,7 @@
             <div>
 
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-return" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="mx-2 btn btn-return" data-bs-toggle="modal" data-bs-target="#exampleModal">
                  <i class="fas fa-shopping-cart"></i>Shop Now
               </button>
 
@@ -526,6 +527,7 @@
       // Assign text data components
       document.getElementById('lblTitle').innerText = activeProductData.name || "Unnamed Masterpiece";
       document.getElementById('lblPrice').innerText = Number(activeProductData.price).toLocaleString('en-IN');
+      document.getElementById('lblProductCode').innerText = activeProductData.product_code||"--";
 
       if (activeProductData.description && activeProductData.description.trim() !== "") {
         document.getElementById('lblDesc').innerText = activeProductData.description;
