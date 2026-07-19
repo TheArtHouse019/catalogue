@@ -510,7 +510,7 @@
   <nav class="navbar navbar-expand-lg bg-white">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">
-        <img id="header_loader_image" src="assets/img/logo.png" alt="Logo">
+        <img id="header_loader_image" src="assets/img/logo.jpg" alt="Logo">
         <span id="header_id_name"></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -518,7 +518,7 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#our_designs">Creations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#featured_design_heading">Creations</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact_us">Contact</a></li>
         </ul>
       </div>
@@ -582,16 +582,16 @@
     <div class="row contact">
       <div class="col-md-6">
         <!-- <p><strong>📍 Address:</strong> Shop No. 12, Main Road, Your City</p> -->
-        <p><strong>📞 Phone:</strong> +91 7888136525</p>
-        <p><strong>📧 Email:</strong> thearthouse019@gmail.com</p>
+        <p><strong>📞 Phone:</strong> <span class="footer_mobile"></span></p>
+        <p><strong>📧 Email:</strong> <span class="footer_email"></span> </p>
         <!-- <p><strong>⏰ Timings:</strong> Mon – Sat | 10 AM – 7 PM</p> -->
       </div>
       <div class="col-md-6 text-md-center mt-4 mt-md-0">
         <p><strong>Follow Our Journey</strong></p>
         <div class="socials mt-2">
-          <a href="https://instagram.com/the_arthouse___19"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://www.youtube.com/@sanikasArtHouse"><i class="fab fa-youtube"></i> Youtube</a>
-          <a><i class="fab fa-whatsapp"></i> 7888136525</a>
+          <a href="" class="footer_insta"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="" class="footer_youtube"><i class="fab fa-youtube" ></i> Youtube</a>
+          <a><i class="fab fa-whatsapp" ></i> <span class="footer_whatsapp"></span></a>
         </div>
       </div>
     </div>
@@ -690,7 +690,7 @@
         event.stopPropagation();
       }
       if (!productId) return;
-      window.location.href = "product_details.html?id=" + encodeURIComponent(productId);
+      window.location.href = "preview.html?id=" + encodeURIComponent(productId);
     };
 
     $(document).ready(function () {
@@ -849,6 +849,7 @@
             <div>
               <h5 class="carousel-card-title">${item.name}</h5>
               <div class="carousel-card-code">Code: ${item.product_code}</div>
+              <div class="carousel-card-code">Price: ${item.price}</div>
             </div>
             <button class="btn btn-shop-now btn-sm w-100 mt-2 featured-shop-btn" 
                 onclick="redirectToProductDetails('${item.id}', event)">Shop Now</button>
@@ -871,7 +872,7 @@
 
       // Action mapping wrapper routing straight to product filters
       window.redirectToProductDetails = function (categoryId) {
-        window.location.href = "products.html?category_id=" + encodeURIComponent(categoryId);
+        window.location.href = "preview.html?id=" + encodeURIComponent(categoryId);
       };
 
       // Run immediately upon window layout rendering execution stack
@@ -991,7 +992,7 @@
       if (!productId) return;
 
       // Redirects directly to your details layout passing down the target identifier
-      window.location.href = "product_details.html?id=" + encodeURIComponent(productId);
+      window.location.href = "preview.html?id=" + encodeURIComponent(productId);
     };
 
     /**

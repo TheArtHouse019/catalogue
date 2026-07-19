@@ -304,7 +304,7 @@
   <nav class="navbar navbar-expand-lg bg-white">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">
-        <img id="header_loader_image" src="assets/img/logo.png" alt="Logo">
+        <img id="header_loader_image" src="assets/img/logo.jpg" alt="Logo">
         <span id="header_id_name"></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -416,7 +416,7 @@
         event.stopPropagation();
       }
       if (!productId) return;
-      window.location.href = "product_details.html?id=" + encodeURIComponent(productId);
+      window.location.href = "preview.html?id=" + encodeURIComponent(productId);
     };
 
     // Pagination Configuration Matrices Engine
@@ -492,6 +492,7 @@
                   <div>
                     <h5 class="grid-card-title">${item.name}</h5>
                     <div class="grid-card-code">Code: ${item.product_code}</div>
+                    <div class="grid-card-code">Price: ${item.price}</div>
                   </div>
                   <button class="btn btn-shop-now btn-sm w-100 mt-2" onclick="redirectToProductDetails('${item.id}', event)">Shop Now</button>
                 </div>
