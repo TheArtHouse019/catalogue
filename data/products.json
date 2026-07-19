@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-19 19:33:07",
+  "last_updated": "2026-07-19 19:33:38",
   "data": [
     {
       "id": "PROD-1782664623808",
@@ -52,7 +52,7 @@
       "image5": "",
       "status": "Active",
       "video_link": "",
-      "price": 0,
+      "price": 1200,
       "description": ""
     },
     {
@@ -178,7 +178,7 @@
       "image5": "",
       "status": "Active",
       "video_link": "",
-      "price": 0,
+      "price": 400,
       "description": ""
     },
     {
@@ -196,7 +196,7 @@
       "image5": "",
       "status": "Active",
       "video_link": "",
-      "price": 0,
+      "price": 200,
       "description": ""
     },
     {
