@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-19 19:33:38",
+  "last_updated": "2026-07-19 19:36:54",
   "data": [
     {
       "id": "PROD-1782664623808",
@@ -232,7 +232,7 @@
       "image5": "",
       "status": "Active",
       "video_link": "",
-      "price": 0,
+      "price": 500,
       "description": ""
     },
     {
